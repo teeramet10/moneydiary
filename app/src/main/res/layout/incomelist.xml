@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/income_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/formdetail"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/income_image"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/income_namelist"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Head"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/income_date"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/income_namelist"
+                android:layout_marginTop="5dp"
+                android:text="date"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/income_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0.00"
+                android:textColor="@color/income"
+                android:textSize="@dimen/textsize" />
+
+            <TextView
+                android:id="@+id/income_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/baht"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

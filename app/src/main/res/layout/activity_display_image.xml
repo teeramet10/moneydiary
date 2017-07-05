@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.teeramet.money.moneydiary.app.teeramet.money.moneydiary.activity.DisplayImageActivity">
+
+    <ImageButton
+        android:layout_width="@dimen/iconsize"
+        android:layout_height="@dimen/iconsize"
+        android:background="@color/transparent"
+        android:padding="@dimen/paddingiconmenu"
+        android:scaleType="fitXY"
+        android:src="@drawable/close48w"
+        android:id="@+id/menuclose"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menuclose"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/black"
+        android:id="@+id/displayimage"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="@dimen/iconsize"/>
+
+</RelativeLayout>

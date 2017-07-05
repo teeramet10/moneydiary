@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.teeramet.money.moneydiary.activity.MapShowActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbarsize"
+            android:background="@color/themeApp"
+            app:contentInsetStart="@dimen/margintoolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.Bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/backmenu"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:onClick="onClick"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/left48w" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/titlewidth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@id/backmenu"
+                    android:text="Location"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/layermenu"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/marginiconright"
+                    android:background="@color/transparent"
+                    android:onClick="onClick"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/layers48w" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.esri.android.map.MapView
+        android:id="@+id/mapview"
+        mapoptions.MapType="Street"
+        mapoptions.ZoomLevel="18"
+        mapoptions.center="13.736717, 100.523186"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:background="#d9f6fc" />
+
+    <RelativeLayout
+        android:id="@+id/formmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/appbar"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="60dp">
+
+        <ImageButton
+            android:id="@+id/btn_mylocation"
+            android:layout_width="@dimen/iconsize"
+            android:layout_height="@dimen/iconsize"
+            android:background="@drawable/ovalmenu"
+            android:elevation="3dp"
+            android:onClick="onClick"
+            android:padding="@dimen/paddingicon"
+            android:scaleType="centerInside"
+            android:src="@drawable/centerdirection48w" />
+
+        <ImageButton
+            android:id="@+id/btn_zoomin"
+            android:layout_width="@dimen/iconsize"
+            android:layout_height="@dimen/iconsize"
+            android:layout_below="@id/btn_mylocation"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ovalmenu"
+            android:elevation="3dp"
+            android:onClick="onClick"
+            android:padding="@dimen/paddingicon"
+            android:scaleType="fitXY"
+            android:src="@drawable/plus48w" />
+
+        <ImageButton
+            android:id="@+id/btn_zoomout"
+            android:layout_width="@dimen/iconsize"
+            android:layout_height="@dimen/iconsize"
+            android:layout_below="@id/btn_zoomin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ovalmenu"
+            android:elevation="3dp"
+            android:onClick="onClick"
+            android:padding="@dimen/paddingicon"
+            android:scaleType="fitXY"
+            android:src="@drawable/minus48w" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailform"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:visibility="invisible">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/sclview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:lines="1"
+                            android:text="Location"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/headtextsize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/location"
+                            android:lines="1"
+                            android:text="name"
+                            android:textColor="@color/textgrey"
+                            android:textSize="@dimen/textsize" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name"
+                            android:text="price"
+                            android:textColor="@color/textgrey"
+                            android:textSize="@dimen/textsize" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@id/price"
+                            android:text="฿"
+                            android:textColor="@color/textgrey"
+                            android:textSize="@dimen/textsize" />
+
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/price"
+                            android:text="date"
+                            android:textColor="@color/textgrey"
+                            android:textSize="@dimen/textsize" />
+
+                        <TextView
+                            android:id="@+id/descript"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/date"
+                            android:text="descript"
+                            android:textColor="@color/textgrey"
+                            android:textSize="@dimen/textsize" />
+
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/close"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@color/transparent"
+                        android:onClick="onClick"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/closeb" />
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/gridimage"
+                        android:layout_height="@dimen/gridimage"
+                        android:layout_alignEnd="@+id/close"
+                        android:layout_alignRight="@+id/close"
+                        android:layout_below="@+id/close"
+                        android:background="@drawable/oval" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teeramet.money.moneydiary.app.teeramet.money.moneydiary.activity.SelectIconCatalogueActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbarsize"
+            android:background="@color/themeApp"
+            app:contentInsetStart="@dimen/margintoolbar"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/backmenu"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:background="@color/transparent"
+                    android:onClick="onClick"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/left48w" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/titlewidth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@id/backmenu"
+                    android:text="Add  Catalogue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <GridView
+        android:id="@+id/selecticon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar"
+        android:horizontalSpacing="0dp"
+        android:numColumns="3"
+        android:verticalSpacing="0dp" />
+
+</RelativeLayout>

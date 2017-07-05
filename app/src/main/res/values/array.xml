@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="icon">
+        <item>salaryb</item>
+        <item>profitb</item>
+        <item>bankb</item>
+
+        <item>foodb</item>
+        <item>drinkb</item>
+        <item>travelb</item>
+        <item>educationb</item>
+        <item>transportb</item>
+        <item>taxb</item>
+        <item>rentb</item>
+        <item>vehicleb</item>
+        <item>shoppingb</item>
+        <item>giftb</item>
+        <item>cosmeticb</item>
+        <item>healthb</item>
+        <item>otherb</item>
+        <item>bikeb</item>
+        <item>barbershopb</item>
+        <item>bookb</item>
+        <item>airplaneb</item>
+        <item>apartmentb</item>
+        <item>hairdryerb</item>
+        <item>coconuttreeb</item>
+        <item>gasstationb</item>
+        <item>lovedateb</item>
+        <item>petb</item>
+        <item>pcc</item>
+
+        <item>badmintonc</item>
+        <item>barbellc</item>
+        <item>batteryc</item>
+        <item>beerc</item>
+        <item>bloomc</item>
+        <item>boatc</item>
+        <item>campfirec</item>
+        <item>cardc</item>
+        <item>chairc</item>
+        <item>christmasc</item>
+        <item>applec</item>
+        <item>coffeec</item>
+        <item>coconutc</item>
+        <item>cupcakec</item>
+        <item>friesc</item>
+        <item>waterc</item>
+        <item>spaghettic</item>
+        <item>donutc</item>
+        <item>icecreamc</item>
+        <item>tomatoc</item>
+        <item>chanpagnec</item>
+        <item>cakec</item>
+        <item>deliveryc</item>
+        <item>coinc</item>
+        <item>compactcamerac</item>
+        <item>dicec</item>
+        <item>facepowderc</item>
+        <item>lipc</item>
+        <item>cosmeticc</item>
+        <item>folderc</item>
+        <item>footballc</item>
+        <item>funnyparkc</item>
+        <item>gamec</item>
+        <item>graduationcapc</item>
+        <item>guitarc</item>
+        <item>hdtvc</item>
+        <item>mobilec</item>
+        <item>lightonc</item>
+        <item>marketbagc</item>
+        <item>moneyboxc</item>
+        <item>paintc</item>
+        <item>partyc</item>
+        <item>plantc</item>
+        <item>printc</item>
+        <item>ringc</item>
+        <item>rubyc</item>
+        <item>salec</item>
+        <item>scalec</item>
+        <item>strollerc</item>
+        <item>trainerc</item>
+        <item>weddingtingc</item>
+        <item>workc</item>
+        <item>atmc</item>
+        <item>visa</item>
+        <item>paypal</item>
+        <item>mastercard</item>
+        <item>amex</item>
+
+    </string-array>
+</resources>

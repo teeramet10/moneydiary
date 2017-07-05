@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_menu_pass_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teeramet.money.moneydiary.app.teeramet.money.moneydiary.activity.MenuPassCodeActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbarsize"
+            android:background="@color/themeApp"
+            app:contentInsetStart="@dimen/margintoolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.Bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/backmenu"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/left48w" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/titlewidth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@id/backmenu"
+                    android:text="Security"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/backevent"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/marginiconright"
+                    android:background="@color/transparent"
+                    android:onClick="onClick"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/returnw"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rectangle"
+        android:id="@+id/formsetpass"
+        android:layout_below="@id/appbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Passcode"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize" />
+
+        <Switch
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/switchcode"
+            android:clickable="false"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:id="@+id/formchangepass"
+        android:layout_below="@id/formsetpass"
+        android:background="@drawable/rectangle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Passcode"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

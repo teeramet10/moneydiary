@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.teeramet.money.moneydiary.activity.AddDataActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbarsize"
+            android:background="@color/themeApp"
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.Bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/backmenu"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:onClick="onClickMenu"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/left48w" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/titlewidth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@id/backmenu"
+                    android:lines="1"
+                    android:text="title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/managecat"
+                    android:layout_width="@dimen/iconsize"
+                    android:layout_height="@dimen/iconsize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/marginiconright"
+                    android:background="@color/transparent"
+                    android:onClick="onClickMenu"
+                    android:padding="@dimen/paddingiconmenu"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/editcatalog48w" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:id="@+id/formname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/product48" />
+
+                <EditText
+                    android:id="@+id/edtname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:hint="Name"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formcatalog"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/formname"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/checklist48" />
+
+                <Spinner
+                    android:id="@+id/descript_catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formprice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/descript_formcatalog"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/coins48" />
+
+                <EditText
+                    android:id="@+id/descript_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:hint="@string/price"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/descript_formprice"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/planner48" />
+
+                <Button
+                    android:id="@+id/descript_date"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:hint="@string/date"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formtime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/descript_formdate"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clock48" />
+
+                <Button
+                    android:id="@+id/descript_time"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:hint="@string/time"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formlocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/descript_formtime"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/map48" />
+
+                <Button
+                    android:id="@+id/descript_location"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:hint="Location"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formdescript"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height"
+                android:layout_below="@id/descript_formlocation"
+                android:layout_marginTop="@dimen/margintop"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:padding="@dimen/paddingicon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/comments48" />
+
+                <EditText
+                    android:id="@+id/descript_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/descript"
+                    android:lines="2"
+                    android:padding="5dp"
+                    android:maxLength="100"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descript_formcamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/formdescript"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/descript_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/square"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/camera48" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/margintop"
+        android:layout_marginRight="@dimen/margintop"
+        android:src="@drawable/savew"
+        app:backgroundTint="@color/themeApp"/>
+
+</RelativeLayout>
+

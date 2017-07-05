@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.teeramet.moneydiary">
+
+    <uses-sdk
+        android:maxSdkVersion="23"
+        android:minSdkVersion="15" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <compatible-screens>
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="xlarge" />
+    </compatible-screens>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/diarymoney"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.AddDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.PassCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.DescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.EditActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="app.teeramet.money.moneydiary.activity.MapShowActivity" />
+        <activity android:name="app.teeramet.money.moneydiary.activity.DisplayImageActivity" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.ManageCatalogueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.ManageAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.AddAndUpdateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.SelectIconCatalogueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.GraphActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="app.teeramet.money.moneydiary.activity.MenuPassCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="app.teeramet.money.moneydiary.activity.BalanceActivity" />
+        <activity android:name="app.teeramet.money.moneydiary.activity.CheckBoxActivity"></activity>
+    </application>
+
+</manifest>

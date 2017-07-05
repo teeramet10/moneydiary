@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teeramet.money.moneydiary.app.teeramet.money.moneydiary.activity.PassCodeActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/enter_passcode"
+        android:textSize="@dimen/headtextsize" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/sizepasscode"
+            android:layout_height="@dimen/sizepasscode"
+            android:layout_margin="@dimen/marginpasscode">
+
+            <ImageView
+                android:id="@+id/pass1"
+                android:layout_width="@dimen/sizepasscode"
+                android:layout_height="@dimen/sizepasscode"
+                android:background="@drawable/passcode" />
+
+            <ImageView
+                android:id="@+id/inpass1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/oval"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/sizepasscode"
+            android:layout_height="@dimen/sizepasscode"
+            android:layout_margin="@dimen/marginpasscode">
+
+            <ImageView
+                android:id="@+id/pass2"
+                android:layout_width="@dimen/sizepasscode"
+                android:layout_height="@dimen/sizepasscode"
+                android:background="@drawable/passcode" />
+
+            <ImageView
+                android:id="@+id/inpass2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/oval"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/sizepasscode"
+            android:layout_height="@dimen/sizepasscode"
+            android:layout_margin="@dimen/marginpasscode">
+
+            <ImageView
+                android:id="@+id/pass3"
+                android:layout_width="@dimen/sizepasscode"
+                android:layout_height="@dimen/sizepasscode"
+                android:background="@drawable/passcode" />
+
+            <ImageView
+                android:id="@+id/inpass3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/oval"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/sizepasscode"
+            android:layout_height="@dimen/sizepasscode"
+            android:layout_margin="@dimen/marginpasscode">
+
+            <ImageView
+                android:id="@+id/pass4"
+                android:layout_width="@dimen/sizepasscode"
+                android:layout_height="@dimen/sizepasscode"
+                android:background="@drawable/passcode" />
+
+            <ImageView
+                android:id="@+id/inpass4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/oval"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/value1"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="1"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value2"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="2"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value3"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="3"
+                android:textSize="@dimen/textpasscode" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/value4"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="4"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value5"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="5"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value6"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="6"
+                android:textSize="@dimen/textpasscode" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/value7"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="7"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value8"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="8"
+                android:textSize="@dimen/textpasscode" />
+
+            <Button
+                android:id="@+id/value9"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="9"
+                android:textSize="@dimen/textpasscode" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:src="@drawable/cancel"/>
+
+
+            <Button
+                android:id="@+id/value0"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:text="0"
+                android:textSize="@dimen/textpasscode" />
+
+
+            <ImageButton
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:src="@drawable/backspace" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

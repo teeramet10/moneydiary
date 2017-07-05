@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="themeApp">#4919a1</color>
+    <color name="themeAppold">#0e2059</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#f1f0f0</color>
+    <color name="notselect">#9e73ef</color>
+    <color name="tabselect">#ffc32a</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="textgrey">#565656</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4070</color>
+    <color name="income">#3ac617</color>
+    <color name="expense">#e41616</color>
+    
+    <color name="blue">#35d0c7</color>
+    <color name="yellow">#f4ce24</color>
+    <color name="green">#2b8b52</color>
+    <color name="earth">#f4e9c3</color>
+    <color name="pink">#762127</color>
+    <color name="rosegold">#d76a6d</color>
+    <color name="blues">#1e3c9e</color>
+
+    <color name="chart1">#59e48e</color>
+    <color name="chart2">#e44e4e</color>
+</resources>

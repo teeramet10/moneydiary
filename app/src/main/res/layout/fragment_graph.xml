@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    tools:context="app.teeramet.money.moneydiary.fragment.MonthGraphFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewbar"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_margin="10dp"
+                android:elevation="5dp">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="@dimen/activity_horizontal_margin" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewpie"
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:layout_below="@id/cardviewbar"
+                android:layout_margin="10dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/incomepiechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardviewpie2"
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:layout_below="@id/cardviewpie"
+                android:layout_margin="10dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/expensepiechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

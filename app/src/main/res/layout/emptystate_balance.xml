@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/emptyimage"
+        android:layout_width="@dimen/emptyimage"
+        android:layout_height="@dimen/emptyimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/emptybalancemargintop"
+        android:alpha="70"
+        android:src="@drawable/nocash" />
+
+    <TextView
+        android:id="@+id/textempty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emptyimage"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="No transaction data "
+        android:textSize="@dimen/headtextsize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/detailtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textempty"
+        android:layout_centerHorizontal="true"
+        android:text="in this period"
+        android:textSize="@dimen/textsize" />
+
+</RelativeLayout>
